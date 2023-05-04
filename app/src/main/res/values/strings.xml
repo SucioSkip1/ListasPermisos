@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Listas</string>
+    <string-array name="Colores">
+        <item>Rojo</item>
+        <item>Cafe</item>
+        <item>Azul</item>
+        <item>Blanco</item>
+        <item>Verde</item>
+    </string-array>
+</resources>
