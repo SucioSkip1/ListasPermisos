@@ -1,10 +1,16 @@
 <resources>
-    <string name="app_name">Listas</string>
-    <string-array name="Colores">
-        <item>Rojo</item>
-        <item>Cafe</item>
-        <item>Azul</item>
-        <item>Blanco</item>
-        <item>Verde</item>
+    <string name="app_name">ListActivity</string>
+    <string name="Descrpcion_de_banda">Esta es una banda de Rock generica nacida en los estados unidos de america</string>
+    <string-array name="Bandas">
+        <item>The Doors</item>
+        <item>Pink Floyd</item>
+        <item>Metallica</item>
+        <item>Deep Purple</item>
+        <item>ACDC</item>
+        <item>The Ramones</item>
+        <item>The Cramps</item>
+        <item>The Who</item>
+        <item>The Adicts</item>
+        <item>Black Sabbath</item>
     </string-array>
 </resources>
