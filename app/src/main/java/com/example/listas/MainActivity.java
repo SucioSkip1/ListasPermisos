@@ -41,5 +41,9 @@ public class MainActivity extends ListActivity {
 int [] vistas = {R.id.logoBanda,R.id.txtTitulo,R.id.txtDes};
 SimpleCursorAdapter adapter =new SimpleCursorAdapter(this, R.layout.activity_main,datos,Columnas,vistas,1);
        setListAdapter(adapter);
+
+
+
+
     }
 }
