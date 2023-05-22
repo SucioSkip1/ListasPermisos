@@ -3,6 +3,10 @@
     <string name="Descrpcion_de_banda"></string>
     <string name="txt_banda" />
     <string name="todo">TODO</string>
+    <string name="btn_gps">GPS</string>
+    <string name="btn_Web">Pagina Web</string>
+    <string name="btn_Tel">Telefono\n</string>
+    <string name="btn_correo">Enviar correo</string>
     <string-array name="Bandas">
         <item>The Doors</item>
         <item>Pink Floyd</item>
