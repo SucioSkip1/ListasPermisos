@@ -56,7 +56,6 @@ String des = Recibir.getString("des");
  web = Recibir.getString("web");
  tel = Recibir.getString("tel");
  correo = Recibir.getString("email");
- id = Recibir.getString("idValue");
 Cover.setImageResource(imgCover);
 Titulo.setText(nombreBanda);
 Descripcion.setText(des);
@@ -70,28 +69,32 @@ Descripcion.setText(des);
         //cbll=latitud,longitud&cbp=0,azimut,0,zoom,altura
         startActivity(intent);
     }
-  public void llamarTelefonno(View view){
+  public void llamarTelefono(View view){
       soundpool.play(b2,1,1,1,0,1);
-      if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.
-              READ_EXTERNAL_STORAGE)
-              != PackageManager.PERMISSION_GRANTED)
-      {
+
+      if (ContextCompat.checkSelfPermission(this, Manifest.permission.
+              CALL_PHONE)
+              != PackageManager.PERMISSION_GRANTED) {
           ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.
                   CALL_PHONE}, RQ1);
       }
       else{
 // Si ya se tienen permisos, continuar con la lógica de la aplicación
           // ...play
-          Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse(tel));
+          Toast.makeText(this, "Permiso concedido", Toast.LENGTH_SHORT).show();
+          Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:"+tel));
           startActivity(intent);
+
       }
+
+
   }
     public void mandarCorreo(View view) {
         soundpool.play(b3,1,1,1,0,1);
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Evento de Rock And Roll");
-                intent.putExtra(Intent.EXTRA_TEXT, "Hola!, Me gustaria contratar su banda para un evento en mi casaa.");
+                intent.putExtra(Intent.EXTRA_TEXT, "Hola!, Me gustaria contratar su banda para un evento en mi casa.");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] {correo});
                 startActivity(intent);
     }
@@ -111,6 +114,9 @@ Descripcion.setText(des);
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // Si se concedió el permiso, continuar con la lógica de la aplicación
                 // ...
+
+                Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse("tel:"+tel));
+                startActivity(intent);
                 Toast.makeText(this, "Se ha concedido el permiso", Toast.LENGTH_SHORT).show();
             } else {
                 // Si se negó el permiso, mostrar un mensaje al usuario o cerrar la aplicaciónes

@@ -43,7 +43,7 @@
         style="@style/dis_btn_tamaño"
         android:layout_height="48dp"
         android:background="@drawable/dise_botones_cover"
-        android:onClick="llamarTelefonno"
+        android:onClick="llamarTelefono"
         android:text="@string/btn_Tel"
         app:backgroundTint="@null"
         app:icon="@drawable/tel"
